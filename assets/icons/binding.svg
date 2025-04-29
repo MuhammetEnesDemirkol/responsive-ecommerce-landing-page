@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 8 C8 16, 24 16, 24 8" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M8 16 C8 24, 24 24, 24 16" stroke="#000000" stroke-width="2" fill="none"/>
+  <path d="M8 24 C8 32, 24 32, 24 24" stroke="#000000" stroke-width="2" fill="none"/>
+  <text x="28" y="16" font-family="Arial" font-size="10" text-anchor="middle" transform="rotate(90, 28, 16)" fill="#000000">CİLT</text>
+</svg> 

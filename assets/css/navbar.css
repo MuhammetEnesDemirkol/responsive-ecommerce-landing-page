@@ -1,0 +1,179 @@
+/* ====================
+   GENEL NAVBAR TASARIMI
+   ==================== */
+
+.top-banner {
+  background-color: var(--primary, #ff5722);
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.top-banner .store-link {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.top-banner .store-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* ==========================
+     MASAÜSTÜ HEADER & NAV
+     ========================== */
+
+.desktop-header .search-bar input {
+  background: transparent;
+  font-size: 0.95rem;
+}
+
+.main-nav {
+  background-color: #fff;
+}
+
+.main-nav .nav-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+  padding: 1rem 1.25rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.main-nav .nav-link:hover {
+  color: var(--primary, #ff5722);
+}
+
+.main-nav .nav-link.active {
+  color: var(--primary, #ff5722);
+}
+
+.main-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary, #ff5722);
+  border-radius: 2px;
+}
+
+/* =====================
+     MOBİL HEADER STİLİ
+     ===================== */
+
+.mobile-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.mobile-header .btn {
+  border: none;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.mobile-header .logo img {
+  height: 36px;
+}
+
+/* ============================
+     OFFCANVAS MENÜ (Mobil Menü)
+     ============================ */
+
+/* Mobile Menu */
+.offcanvas {
+  max-width: var(--menu-width);
+}
+
+.offcanvas-header {
+  padding: 1rem;
+}
+
+.offcanvas-body {
+  background: #f8f9fa;
+  padding: 0;
+}
+
+.quick-menu-title {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  background: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Quick Menu Card */
+.quick-menu-card {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  height: 100%;
+  position: relative;
+}
+
+.quick-menu-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-menu-card .card-content {
+  text-align: center;
+}
+
+.quick-menu-card .card-main-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-color);
+}
+
+.quick-menu-card .card-title {
+  color: var(--text-color);
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Mobil Arama Çubuğu (Gizli) */
+.mobile-search-bar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+/* Mobil Arama Çubuğu (Açıkken) */
+.mobile-search-bar.active {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobile-search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.mobile-search-bar i {
+  font-size: 1.5rem;
+  color: #555;
+}

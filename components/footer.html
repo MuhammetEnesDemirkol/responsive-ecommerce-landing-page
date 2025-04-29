@@ -1,0 +1,197 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Sol Parça - Sayfalar -->
+    <div class="footer-section">
+      <h3 class="footer-title">Sayfalar</h3>
+      <ul class="footer-links">
+        <li><a href="/" class="footer-link">AnaSayfa</a></li>
+        <li><a href="/hakkimizda" class="footer-link">Hakkımızda</a></li>
+        <li>
+          <a href="/calisanlarimiz" class="footer-link">Çalışanlarımız</a>
+        </li>
+        <li><a href="/iletisim" class="footer-link">İletişim</a></li>
+      </ul>
+    </div>
+
+    <!-- Orta Parça - İletişim -->
+    <div class="footer-section">
+      <h3 class="footer-title">İletişim</h3>
+      <ul class="footer-contact">
+        <li class="contact-item">
+          <i class="fas fa-envelope me-2"></i>
+          <span>info@dahiyen.com</span>
+        </li>
+        <li class="contact-item">
+          <i class="fas fa-mobile-alt me-2"></i>
+          <span>+90 555 123 4567</span>
+        </li>
+        <li class="contact-item">
+          <i class="fas fa-phone me-2"></i>
+          <span>+90 212 123 4567</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sağ Parça - Sosyal Medya -->
+    <div class="footer-section">
+      <h3 class="footer-title">Sosyal Medya</h3>
+      <div class="social-media">
+        <a
+          href="https://instagram.com/dahiyen"
+          target="_blank"
+          class="social-icon"
+        >
+          <div class="social-icon-wrapper">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a
+          href="https://wa.me/905551234567"
+          target="_blank"
+          class="social-icon"
+        >
+          <div class="social-icon-wrapper">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid #e9ecef;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .footer-section {
+    flex: 1;
+    margin: 0 15px;
+  }
+
+  .footer-title {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  .footer-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #ff6b6b;
+    border-radius: 3px;
+  }
+
+  .footer-links,
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .footer-links li,
+  .footer-contact li {
+    margin-bottom: 12px;
+  }
+
+  .footer-link {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 5px 0;
+  }
+
+  .footer-link:hover {
+    color: #ff6b6b;
+    transform: translateX(5px);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    color: #666;
+    transition: all 0.3s ease;
+  }
+
+  .contact-item i {
+    color: #ff6b6b;
+    font-size: 18px;
+  }
+
+  .contact-item:hover {
+    color: #333;
+    transform: translateX(5px);
+  }
+
+  .social-media {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .social-icon-wrapper i {
+    font-size: 20px;
+    color: #ff6b6b;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover .social-icon-wrapper {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .social-icon:hover .social-icon-wrapper i {
+    color: #ff4757;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+
+    .footer-section {
+      margin-bottom: 30px;
+    }
+
+    .footer-title {
+      font-size: 16px;
+    }
+
+    .footer-link,
+    .contact-item {
+      font-size: 14px;
+    }
+  }
+</style>

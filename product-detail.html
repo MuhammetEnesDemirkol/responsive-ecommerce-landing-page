@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürün Detay - Dahiyen</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Özel CSS -->
+    <link href="assets/css/navbar.css" rel="stylesheet" />
+    <link href="assets/css/product-detail.css" rel="stylesheet" />
+    <!-- Font Awesome ve Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar Bölümü-->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Ürün Detay Ana Bölüm -->
+    <main class="product-detail py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Sol Taraf: Ürün Görselleri -->
+          <div class="col-12 col-lg-6">
+            <div
+              class="product-images position-relative bg-light p-4 rounded-4 mb-4"
+            >
+              <div class="d-flex align-items-start gap-3">
+                <!-- Sol: Ürün Özellik İkonları -->
+                <div
+                  class="product-features d-flex flex-column align-items-center"
+                  style="width: 60px"
+                >
+                  <div class="feature-icon rounded-3 mb-3" title="Ciltli">
+                    <img
+                      src="assets/images/icons/notebook.svg"
+                      alt="Ciltli"
+                      class="feature-img img-fluid"
+                    />
+                  </div>
+                  <div class="feature-icon rounded-3 mb-3" title="A5 Boyut">
+                    <img
+                      src="assets/images/icons/a5.svg"
+                      alt="A5"
+                      class="feature-img img-fluid"
+                    />
+                  </div>
+                  <div class="feature-icon rounded-3 mb-3" title="60 Yaprak">
+                    <img
+                      src="assets/images/icons/60-yaprak.svg"
+                      alt="60 Yaprak"
+                      class="feature-img img-fluid"
+                    />
+                  </div>
+                  <div class="feature-icon rounded-3" title="Renkli Baskı">
+                    <img
+                      src="assets/images/icons/renkli.svg"
+                      alt="Renkli"
+                      class="feature-img img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <!-- Sağ: Galeri ve Badge -->
+                <div class="flex-grow-1 position-relative">
+                  <div class="position-absolute top-0 end-0 z-3 m-2">
+                    <span class="badge bg-success rounded-pill px-3 py-2">
+                      <i class="bi bi-lightning-fill"></i> Çok Hızlı Teslimat
+                    </span>
+                  </div>
+                  <!-- Swiper Alanı -->
+                  <div
+                    id="product-gallery"
+                    class="product-thumbs-slider-container mt-3"
+                  >
+                    <div class="swiper mainSwiper">
+                      <div class="swiper-wrapper" id="gallery-wrapper"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                    <div
+                      class="dot-pagination mt-2"
+                      id="product-dot-pagination"
+                    ></div>
+                    <div class="swiper thumbsSwiper mt-3">
+                      <div class="swiper-wrapper" id="thumbs-wrapper"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sağ Taraf: Ürün Bilgileri -->
+          <div class="col-12 col-lg-6">
+            <!-- Ürün Adı -->
+            <h1
+              id="product-title"
+              class="product-title display-6 fw-bold mb-2"
+            ></h1>
+
+            <!-- Değerlendirme -->
+            <div class="product-rating bg-light rounded-4 p-4 mb-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-2"
+              >
+                <span class="store-badge">
+                  <img
+                    src="assets/images/logo/trendyol-logo.png"
+                    alt="Trendyol"
+                    height="24"
+                  />
+                </span>
+                <div class="rating-count text-muted">(125 değerlendirme)</div>
+              </div>
+              <div class="rating-stars">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <span class="mx-2" style="color: black">•</span>
+                <span class="fw-bold" style="color: black">4.7</span>
+              </div>
+            </div>
+
+            <!-- Satın Alma Seçenekleri - Masaüstünde Görünür -->
+            <div
+              id="product-sellers"
+              class="purchase-options mb-4 desktop-purchase-options"
+            ></div>
+            <div class="purchase-info purchase-info-vertical mt-4">
+              <div
+                class="info-item d-flex align-items-center border-bottom border-dotted pb-2 mb-3"
+              >
+                <i class="fas fa-shipping-fast text-success me-2"></i>
+                <span
+                  ><b>2 saat 32 dakika</b> içinde sipariş verirsen
+                  <span class="text-success fw-bold">en geç yarın</span>
+                  kargoda!</span
+                >
+              </div>
+              <div
+                class="info-item d-flex align-items-center border-bottom border-dotted pb-2 mb-3"
+              >
+                <i class="fas fa-ticket-alt text-danger me-2"></i>
+                <span><b>10 TL</b> Kupon Fırsatı - <b>trendyol</b></span>
+              </div>
+              <div class="info-item d-flex align-items-center">
+                <i class="fas fa-gift text-primary me-2"></i>
+                <span
+                  >Her Siparişinize <b>Defter</b> ve
+                  <b>Ayraç <span class="text-primary">HEDİYE!</span></b></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobilde Satın Alma Seçenekleri -->
+        <div class="row d-lg-none">
+          <div class="col-12">
+            <div
+              id="mobile-product-sellers"
+              class="purchase-options mb-4"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Ürün Detayları -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <!-- Ürün Özellikleri -->
+            <div class="product-specs bg-light rounded-4 p-4 mb-4">
+              <h2 class="specs-title mb-4">ÜRÜN ÖZELLİKLERİ</h2>
+              <div id="product-features" class="specs-grid"></div>
+            </div>
+
+            <!-- Ürün Açıklaması -->
+            <div class="product-description bg-light rounded-4 p-4">
+              <h2 class="description-title mb-4">ÜRÜN AÇIKLAMASI</h2>
+              <div id="product-description"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Bölümü -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Özel JS -->
+    <script src="assets/js/product-detail.js"></script>
+    <script src="assets/js/load-partials.js"></script>
+    <script src="assets/js/product-data.js"></script>
+    <script src="assets/js/product-detail-dynamic.js"></script>
+    <script>
+      // Footer'ı yükle
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

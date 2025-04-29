@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dahiyen</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Ana CSS -->
+    <link href="assets/css/navbar.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Font Awesome İkonları -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar Bölümü -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Ana Slider Alanı -->
+    <section class="main-slider py-4">
+      <div class="container">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Slider Göstergeleri -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#mainCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#mainCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#mainCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#mainCarousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+
+          <!-- Slider İçeriği -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slider-card">
+                <img
+                  src="assets/images/sliders/slider1.jpg"
+                  class="d-block w-100"
+                  alt="Slider Image 1"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slider-card">
+                <img
+                  src="assets/images/sliders/slider2.jpg"
+                  class="d-block w-100"
+                  alt="Slider Image 2"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slider-card">
+                <img
+                  src="assets/images/sliders/slider3.jpg"
+                  class="d-block w-100"
+                  alt="Slider Image 3"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slider-card">
+                <img
+                  src="assets/images/sliders/slider4.jpg"
+                  class="d-block w-100"
+                  alt="Slider Image 4"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Kontrolleri -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#mainCarousel"
+            data-bs-slide="prev"
+          >
+            <div class="carousel-control-btn">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <span class="visually-hidden">Önceki</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#mainCarousel"
+            data-bs-slide="next"
+          >
+            <div class="carousel-control-btn">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <span class="visually-hidden">Sonraki</span>
+          </button>
+        </div>
+
+        <!-- Masaüstü Alt Slider Kartları -->
+        <div class="row d-none d-md-flex mt-md-4">
+          <div class="col-md-4">
+            <div class="slider-thumbnail active">
+              <img
+                src="assets/images/sliders/slider1.jpg"
+                alt="Thumbnail 1"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="slider-thumbnail">
+              <img
+                src="assets/images/sliders/slider2.jpg"
+                alt="Thumbnail 2"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="slider-thumbnail">
+              <img
+                src="assets/images/sliders/slider3.jpg"
+                alt="Thumbnail 3"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobil Alt Slider Kartları -->
+        <div class="d-md-none">
+          <div class="swiper thumbnailSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-thumbnail active">
+                  <img
+                    src="assets/images/sliders/slider1.jpg"
+                    alt="Thumbnail 1"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-thumbnail">
+                  <img
+                    src="assets/images/sliders/slider2.jpg"
+                    alt="Thumbnail 2"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kampanya Mobil Kutusu (Sadece mobilde görünsün) -->
+    <div class="container d-md-none">
+      <div class="section-title-wrapper mb-2">
+        <span class="section-title-block"></span>
+        <h2 class="section-title mb-0">KAMPANYALAR</h2>
+      </div>
+      <div class="mobile-campaign-box">
+        <div class="mobile-campaign-header">
+          <div class="mobile-campaign-title">2. Ürüne 25 TL İndirim</div>
+          <div class="mobile-campaign-timer">
+            <div class="mobile-campaign-timer-box">
+              03
+              <div class="mobile-campaign-timer-label">GÜN</div>
+            </div>
+            <div class="mobile-campaign-timer-box">
+              14
+              <div class="mobile-campaign-timer-label">SAAT</div>
+            </div>
+            <div class="mobile-campaign-timer-box">
+              08
+              <div class="mobile-campaign-timer-label">DAKİKA</div>
+            </div>
+            <div class="mobile-campaign-timer-box">
+              48
+              <div class="mobile-campaign-timer-label">SANİYE</div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-campaign-products">
+          <div class="mobile-campaign-product">
+            <img
+              src="assets/images/products/product1.jpg"
+              class="mobile-campaign-product-img"
+              alt="Ürün 1"
+            />
+            <div class="mobile-campaign-product-price">100,00 TL</div>
+          </div>
+          <div class="mobile-campaign-product">
+            <img
+              src="assets/images/products/product1.jpg"
+              class="mobile-campaign-product-img"
+              alt="Ürün 2"
+            />
+            <div class="mobile-campaign-product-price">99,50 TL</div>
+          </div>
+          <div class="mobile-campaign-product">
+            <img
+              src="assets/images/products/product1.jpg"
+              class="mobile-campaign-product-img"
+              alt="Ürün 3"
+            />
+            <div class="mobile-campaign-product-price">87,50 TL</div>
+          </div>
+          <div class="mobile-campaign-product">
+            <img
+              src="assets/images/products/product1.jpg"
+              class="mobile-campaign-product-img"
+              alt="Ürün 4"
+            />
+            <div class="mobile-campaign-product-price">187,50 TL</div>
+          </div>
+        </div>
+        <div
+          class="mobile-campaign-pagination mt-3 d-flex justify-content-center"
+        >
+          <span class="mobile-campaign-dot active"></span>
+          <span class="mobile-campaign-dot"></span>
+          <span class="mobile-campaign-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mağaza Linkleri -->
+
+    <!-- Mağaza Linkleri Alanı -->
+    <section class="shop-links py-4">
+      <div class="container">
+        <h5 class="section-title text-center mb-4">MAĞAZA LİNKLERİ</h5>
+        <div class="row g-3 justify-content-center">
+          <!-- Kitapkolik -->
+          <div class="col-12 col-md-4 col-lg-2">
+            <a href="#" class="shop-link-card shop-link-card-dark">
+              <div class="category-icon">
+                <img
+                  src="assets/images/icons/store.svg"
+                  alt="Mağaza İkonu"
+                  class="store-svg-icon"
+                />
+              </div>
+              <img
+                src="assets/images/logo/kitapkolik-logo.png"
+                class="brand-logo mb-1"
+              />
+              <span>Kitapkolik Nesiller İçin</span>
+              <small>Tıkla Sipariş Ver</small>
+            </a>
+          </div>
+
+          <!-- Trendyol -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="shop-link-card shop-link-card-trend">
+              <div class="category-icon">
+                <img
+                  src="assets/images/icons/store.svg"
+                  alt="Mağaza İkonu"
+                  class="store-svg-icon"
+                />
+              </div>
+              <img
+                src="assets/images/logo/trendyol-logo.png"
+                class="brand-logo mb-1"
+              />
+              <span>Tıkla Sipariş Ver</span>
+            </a>
+          </div>
+
+          <!-- Hepsiburada -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="shop-link-card shop-link-card-orange">
+              <div class="category-icon">
+                <img
+                  src="assets/images/icons/store.svg"
+                  alt="Mağaza İkonu"
+                  class="store-svg-icon"
+                />
+              </div>
+              <img
+                src="assets/images/logo/hepsiburada-logo.png"
+                class="brand-logo mb-1"
+              />
+              <span>Tıkla Sipariş Ver</span>
+            </a>
+          </div>
+
+          <!-- Whatsapp -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="shop-link-card shop-link-card-green">
+              <div class="category-icon">
+                <img
+                  src="assets/images/icons/whatsapp.svg"
+                  alt="Mağaza İkonu"
+                  class="store-svg-icon"
+                />
+              </div>
+              <i class="fab fa-whatsapp card-icon"></i>
+              <span>Whatsapp</span>
+              <span>Destek</span>
+            </a>
+          </div>
+
+          <!-- Toptan -->
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="shop-link-card shop-link-card-blue">
+              <div class="category-icon">
+                <img
+                  src="assets/images/icons/box.svg"
+                  alt="Mağaza İkonu"
+                  class="store-svg-icon"
+                />
+              </div>
+              <i class="fas fa-box card-icon"></i>
+              <span>Toptan</span>
+              <span>Dağıtımcı, kırtasiye ve okullar için</span>
+            </a>
+          </div>
+
+          <!-- Katalog -->
+          <div class="col-12 col-md-4 col-lg-2">
+            <a href="#" class="shop-link-card shop-link-card-dark">
+              <div class="category-icon">
+                <img
+                  src="assets/images/icons/catalog.svg"
+                  alt="Mağaza İkonu"
+                  class="store-svg-icon"
+                />
+              </div>
+              <i class="fas fa-book-open card-icon"></i>
+              <span>Katalog</span>
+              <span>Tüm Ürünlerimizi Görüntüleyebilirsiniz</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kampanyalar, Kategoriler ve Ürünler -->
+    <!-- Tab İçerikleri (Kampanyalar) -->
+    <div class="tab-content" id="categoryTabContent">
+      <!-- 3 AL 2 ÖDE -->
+      <div class="tab-pane fade show active" id="three-for-two" role="tabpanel">
+        <div class="swiper campaignSwiper">
+          <div class="swiper-wrapper" id="threeForTwoProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev category-prev"></div>
+          <div class="swiper-button-next category-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- 2. ÜRÜN 25TL İNDİRİM -->
+      <div class="tab-pane fade" id="second-discount" role="tabpanel">
+        <div class="swiper campaignSwiper">
+          <div class="swiper-wrapper" id="secondDiscountProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev category-prev"></div>
+          <div class="swiper-button-next category-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- KUPON FIRSATI -->
+      <div class="tab-pane fade" id="coupon" role="tabpanel">
+        <div class="swiper campaignSwiper">
+          <div class="swiper-wrapper" id="couponProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev category-prev"></div>
+          <div class="swiper-button-next category-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masaüstü Kategori Sekmeleri -->
+    <section class="category-products py-4">
+      <div class="container">
+        <!-- Desktop Kategori Sekmeleri -->
+        <div class="category-tabs d-none d-lg-block">
+          <ul
+            class="nav nav-tabs justify-content-center"
+            id="categoryTabs"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="planlayici-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#planlayici"
+                type="button"
+                role="tab"
+              >
+                PLANLAYICI
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="okuma-gunlugu-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#okuma-gunlugu"
+                type="button"
+                role="tab"
+              >
+                OKUMA GÜNLÜĞÜ
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="ayrac-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#ayrac"
+                type="button"
+                role="tab"
+              >
+                AYRAÇ
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Masaüstü Tab İçerikleri -->
+    <div class="tab-content mt-4 d-none d-lg-block" id="categoryTabContent">
+      <div class="tab-pane fade show active" id="planlayici" role="tabpanel">
+        <div class="container">
+          <div class="swiper categorySwiper">
+            <div class="swiper-wrapper" id="categoryPlannerProducts">
+              <!-- Ürün kartları buraya yüklenecek -->
+            </div>
+            <div class="swiper-button-prev category-prev"></div>
+            <div class="swiper-button-next category-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="okuma-gunlugu" role="tabpanel">
+        <div class="container">
+          <div class="swiper categorySwiper">
+            <div class="swiper-wrapper" id="categoryJournalProducts">
+              <!-- Ürün kartları buraya yüklenecek -->
+            </div>
+            <div class="swiper-button-prev category-prev"></div>
+            <div class="swiper-button-next category-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="ayrac" role="tabpanel">
+        <div class="container">
+          <div class="swiper categorySwiper">
+            <div class="swiper-wrapper" id="categoryBookmarkProducts">
+              <!-- Ürün kartları buraya yüklenecek -->
+            </div>
+            <div class="swiper-button-prev category-prev"></div>
+            <div class="swiper-button-next category-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobil Kategoriler ve Başlıklar -->
+    <div class="mobile-categories d-lg-none">
+      <!-- Planlayıcılar -->
+      <div class="category-block">
+        <div class="section-title-wrapper mb-2">
+          <span class="section-title-block"></span>
+          <h2 class="section-title mb-0">PLANLAYICILAR</h2>
+        </div>
+        <div class="categorySwiper swiper">
+          <div class="swiper-wrapper" id="mobileCategoryPlannerProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev mobile-category-prev"></div>
+          <div class="swiper-button-next mobile-category-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Okuma Günlüğü -->
+      <div class="category-block">
+        <div class="section-title-wrapper mb-2">
+          <span class="section-title-block"></span>
+          <h2 class="section-title mb-0">OKUMA GÜNLÜĞÜ</h2>
+        </div>
+        <div class="categorySwiper swiper">
+          <div class="swiper-wrapper" id="mobileCategoryJournalProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev mobile-category-prev"></div>
+          <div class="swiper-button-next mobile-category-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Ayraç -->
+      <div class="category-block">
+        <div class="section-title-wrapper mb-2">
+          <span class="section-title-block"></span>
+          <h2 class="section-title mb-0">AYRAÇ</h2>
+        </div>
+        <div class="categorySwiper swiper">
+          <div class="swiper-wrapper" id="mobileCategoryBookmarkProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev mobile-category-prev"></div>
+          <div class="swiper-button-next mobile-category-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Öne Çıkanlar Bölümü -->
+    <section class="featured-products py-5">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-title-block"></span>
+          <h2 class="section-title">Öne Çıkanlar</h2>
+        </div>
+        <div class="swiper featuredSwiper">
+          <div class="swiper-wrapper" id="featuredProducts">
+            <!-- Ürün kartları buraya yüklenecek -->
+          </div>
+          <div class="swiper-button-prev featured-prev"></div>
+          <div class="swiper-button-next featured-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kullanıcı Değerlendirmeleri Alanı -->
+    <section class="user-reviews py-5">
+      <div class="container">
+        <!-- Değerlendirme Özeti -->
+        <div class="review-summary bg-cream p-4 rounded-3 mb-4 text-center">
+          <div
+            class="rating-section d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="rating-stars fs-4 mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <span class="mx-2" style="color: black">•</span>
+              <span class="fw-bold" style="color: black">4.7</span>
+            </div>
+            <h2 class="review-stats mb-0">
+              <span class="fw-bold">4.235 DEĞERLENDİRME</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Değerlendirme Sliderı ve Navigasyon -->
+        <div class="position-relative">
+          <div class="swiper reviewSwiper">
+            <div class="swiper-wrapper">
+              <!-- Değerlendirme Kartı 1 -->
+              <div class="swiper-slide">
+                <div class="review-card bg-white p-4 rounded-3 h-100">
+                  <div class="review-header d-flex align-items-start mb-2">
+                    <img
+                      class="review-avatar me-2"
+                      src="assets/images/logo/profile-logo.png"
+                      alt="Kullanıcı"
+                    />
+                    <div class="flex-grow-1">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h6 class="mb-0 fw-bold">Furkan K.</h6>
+                          <small class="text-muted">20 Mart 2025</small>
+                        </div>
+                        <div class="rating-stars">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="product-name fw-bold mb-2">Günlük Planlayıcısı</h6>
+                  <p class="review-text mb-3">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                  <div class="review-footer">
+                    <small>
+                      <span class="text-orange">trendyol</span>
+                      <span class="mx-1">•</span>
+                      <span class="fw-bold">Dahiyen</span>
+                      satıcısından alındı.
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Değerlendirme Kartı 2 -->
+              <div class="swiper-slide">
+                <div class="review-card bg-white p-4 rounded-3 h-100">
+                  <div class="review-header d-flex align-items-start mb-2">
+                    <img
+                      class="review-avatar me-2"
+                      src="assets/images/logo/profile-logo.png"
+                      alt="Kullanıcı"
+                    />
+                    <div class="flex-grow-1">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h6 class="mb-0 fw-bold">Furkan K.</h6>
+                          <small class="text-muted">20 Mart 2025</small>
+                        </div>
+                        <div class="rating-stars">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="product-name fw-bold mb-2">Günlük Planlayıcısı</h6>
+                  <p class="review-text mb-3">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                  <div class="review-footer">
+                    <small>
+                      <span class="text-orange">trendyol</span>
+                      <span class="mx-1">•</span>
+                      <span class="fw-bold">Dahiyen</span>
+                      satıcısından alındı.
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Değerlendirme Kartı 3 -->
+              <div class="swiper-slide">
+                <div class="review-card bg-white p-4 rounded-3 h-100">
+                  <div class="review-header d-flex align-items-start mb-2">
+                    <img
+                      class="review-avatar me-2"
+                      src="assets/images/logo/profile-logo.png"
+                      alt="Kullanıcı"
+                    />
+                    <div class="flex-grow-1">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h6 class="mb-0 fw-bold">Furkan K.</h6>
+                          <small class="text-muted">20 Mart 2025</small>
+                        </div>
+                        <div class="rating-stars">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="product-name fw-bold mb-2">Günlük Planlayıcısı</h6>
+                  <p class="review-text mb-3">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                  <div class="review-footer">
+                    <small>
+                      <span class="text-orange">trendyol</span>
+                      <span class="mx-1">•</span>
+                      <span class="fw-bold">Dahiyen</span>
+                      satıcısından alındı.
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="review-card bg-white p-4 rounded-3 h-100">
+                  <div class="review-header d-flex align-items-start mb-2">
+                    <img
+                      class="review-avatar me-2"
+                      src="assets/images/logo/profile-logo.png"
+                      alt="Kullanıcı"
+                    />
+                    <div class="flex-grow-1">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div>
+                          <h6 class="mb-0 fw-bold">Furkan K.</h6>
+                          <small class="text-muted">20 Mart 2025</small>
+                        </div>
+                        <div class="rating-stars">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="product-name fw-bold mb-2">Günlük Planlayıcısı</h6>
+                  <p class="review-text mb-3">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                  <div class="review-footer">
+                    <small>
+                      <span class="text-orange">trendyol</span>
+                      <span class="mx-1">•</span>
+                      <span class="fw-bold">Dahiyen</span>
+                      satıcısından alındı.
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider Pagination -->
+            <div class="swiper-pagination review-dots"></div>
+          </div>
+
+          <!-- Slider Navigation -->
+          <div class="swiper-button-prev review-prev"></div>
+          <div class="swiper-button-next review-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tüm Ürünler Alanı -->
+    <section class="all-products py-4">
+      <div class="container">
+        <div class="section-title-wrapper">
+          <span class="section-title-block"></span>
+          <h2 class="section-title mb-0">TÜM ÜRÜNLER</h2>
+        </div>
+        <div class="row g-4" id="allProducts">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/product1.jpg"
+                  class="product-img"
+                  alt="Ürün 1"
+                />
+                <div class="image-prev">
+                  <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="image-next">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="dot-pagination">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Bölümü -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Ana JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Footer'ı yükle
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+
+      // Navbar'ı yükle
+      fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
